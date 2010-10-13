@@ -231,7 +231,20 @@ private:
 	}
 	if (*cur_char == '/' && peekchar()=='*') {
 	    DEBUG_PRINTF("/*/ comment detected, attempting to skip until */ or EOF\n");
-	    while(*cur_char != EOF && *cur_char != '\0') { nextchar(); if (*cur_char == '*' && peekchar() == '/'){ nextchar(); break; }}
+	    nextchar();
+	    while(!(*cur_char == '*' && peekchar() == '/'))
+            {
+               if (*cur_char == '\0' || *cur_char == EOF){ 
+                    curToken.tokenType = rjtEOF;
+                    return;
+               }
+               DEBUG_PRINTF("%c", *cur_char);
+               nextchar();
+            }
+            nextchar();
+            nextchar();
+
+            DEBUG_PRINTF("\nchar after comment loop done: %c\n", *cur_char);
 	    skipwhitespace();
 	    c = *cur_char;
 	}
