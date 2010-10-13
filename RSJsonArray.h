@@ -7,7 +7,7 @@ class RSJsonArray : public RSJsonBasic
 {
 	std::vector<RSJsonBasic*> m_ary;
 
-public:	
+public:
 	virtual ~RSJsonArray()
 	{
 		for (int i = (int)m_ary.size()-1; i >= 0; --i)
@@ -23,7 +23,9 @@ public:
 		return m_ary[i];
 	}
 
-	virtual RSJsonBasic* get(int i){ return m_ary[i]; }
+	virtual RSJsonBasic* get(int i){
+		return m_ary[i];
+	}
 
 	inline void push_back(RSJsonBasic* item)
 	{
@@ -35,21 +37,23 @@ public:
 		return (int)m_ary.size();
 	}
 
-	const std::string& toString()
+	const std::string& AsJsonString()
 	{
-		m_strRepresentation = "[";
+		m_encStr = "[";
 		int count = this->count();
 		for (int i = 0; i < count; ++i)
 		{
-			if (i != 0){ m_strRepresentation += ",\r\n"; }
-			m_strRepresentation += m_ary[i]->toString();
+			if (i != 0) { m_encStr += ",\r\n"; }
+			m_encStr += m_ary[i]->AsJsonString();
 		}
-		m_strRepresentation += "]";
+		m_encStr += "]";
 
-		return m_strRepresentation;
+		return m_encStr;
 	}
 
-	virtual RSJsonType Type() const { return rstArray; }
+	virtual RSJsonType Type() const {
+		return rstArray;
+	}
 };
 
 

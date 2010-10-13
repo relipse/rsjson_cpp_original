@@ -1,0 +1,18 @@
+RSJson - A Really Simple JSON Parser/Reader/Writer for C++
+To compile try:
+make 
+
+./rsjson_tester
+
+or 
+
+./rsjson_tester --input < tests/widget_test.json
+
+or 
+
+./rsjson_tester {"foo":"bar, "object": {1:"one", 2:"two"}}
+
+
+to tar all the files up try "make tar"
+
+
