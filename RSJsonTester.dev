@@ -30,16 +30,6 @@ CompilerSet=0
 CompilerSettings=
 
 [Unit1]
-FileName=test_rsjson.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit2]
 FileName=RSJson.h
 CompileCpp=1
 Folder=RSJsonTester
@@ -49,7 +39,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit3]
+[Unit2]
 FileName=RSJsonArray.h
 CompileCpp=1
 Folder=RSJsonTester
@@ -59,7 +49,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit4]
+[Unit3]
 FileName=RSJsonBasic.h
 CompileCpp=1
 Folder=RSJsonTester
@@ -69,7 +59,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit5]
+[Unit4]
 FileName=RSJsonFloat.h
 CompileCpp=1
 Folder=RSJsonTester
@@ -79,7 +69,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit6]
+[Unit5]
 FileName=RSJsonInt.h
 CompileCpp=1
 Folder=RSJsonTester
@@ -89,7 +79,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit7]
+[Unit6]
 FileName=RSJsonObject.h
 CompileCpp=1
 Folder=RSJsonTester
@@ -99,7 +89,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit8]
+[Unit7]
 FileName=RSJsonParser.h
 CompileCpp=1
 Folder=RSJsonTester
@@ -109,10 +99,20 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit9]
+[Unit8]
 FileName=RSJsonString.h
 CompileCpp=1
 Folder=RSJsonTester
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit9]
+FileName=test_rsjson.cpp
+CompileCpp=1
+Folder=
 Compile=1
 Link=1
 Priority=1000
